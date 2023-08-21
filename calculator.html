@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|VT323" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="calcWrapper">
+    <div class="screenBase">
+      <input id="result" placeholder="0" readonly class="screen">
+    </div>
+    <div class="buttons">
+      <button class="ac-ce" value="ac" data-type="reset" onclick="resetResult()">AC</button>
+      <button class="ac-ce" value="ce" data-type="reset" onclick="removeLast()"><i class='bx bxs-tag-x'></i></button>
+      <button value="/" data-type="operation" onclick="display('/')">÷</button>
+      <button value="*" data-type="operation" onclick="display('*')" >x</button>
+      <button value="7" data-type="number" onclick="display('7')">7</button>
+      <button value="8" data-type="number" onclick="display('8')">8</button>
+      <button value="9" data-type="number" onclick="display('9')">9</button>
+      <button value="-" data-type="operation" onclick="display('-')">-</button>
+      <button value="4" data-type="number" onclick="display('4')">4</button>
+      <button value="5" data-type="number" onclick="display('5')">5</button>
+      <button value="6" data-type="number" onclick="display('6')">6</button>
+      <button value="+" data-type="operation" onclick="display('+')">+</button>
+      <button value="1" data-type="number" onclick="display('1')">1</button>
+      <button value="2" data-type="number" onclick="display('2')">2</button>
+      <button value="3" data-type="number" onclick="display('3')">3</button>
+      <button value="3" data-type="number" onclick="display('.')">.</button>
+      <button class="hidden">_</button>
+      <button class="zero" value="0" data-type="number" onclick="display('0')">0</button>
+      <button value="." data-type="number" onclick="display('(')">(</button>
+      <button value="." data-type="number" onclick="display(')')">)</button>
+      <button class="equal" value="=" data-type="operation" onclick="exprEval()">=</button>
+    </div>
+  </div>
+</body>
+<script src="./main.js"></script>
+</html>
